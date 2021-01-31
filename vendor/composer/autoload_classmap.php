@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Classes\\Connection' => $baseDir . '/app/classes/Connection.php',
     'Classes\\QueryBuilder' => $baseDir . '/app/classes/QueryBuilder.php',
+    'Classes\\User' => $baseDir . '/app/classes/User.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
 );

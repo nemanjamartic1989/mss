@@ -23,6 +23,7 @@ class ComposerStaticInit870624da4a36d6a1692e51a5a9980e30
     public static $classMap = array (
         'Classes\\Connection' => __DIR__ . '/../..' . '/app/classes/Connection.php',
         'Classes\\QueryBuilder' => __DIR__ . '/../..' . '/app/classes/QueryBuilder.php',
+        'Classes\\User' => __DIR__ . '/../..' . '/app/classes/User.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
     );
 
