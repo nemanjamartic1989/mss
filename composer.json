@@ -3,5 +3,8 @@
         "psr-4": {
             "Classes\\": "app/classes"
         }
+    },
+    "require": {
+        "nesbot/carbon": "^2.45"
     }
 }
