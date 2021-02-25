@@ -18,7 +18,30 @@ class User extends QueryBuilder
 
         if ($query) {
 			$this->register_result = true;
-            header("Location: index.php");
+            header("Location: index");
 		}
     }
+
+    public function logUser()
+	{
+		$sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+		$query = $this->db->prepare($sql);
+		$query->execute([$_POST['login_email'], md5($_POST['password'])]);
+		$loggedUser = $query->fetch(\PDO::FETCH_OBJ);
+
+		if ($loggedUser != NULL) {
+			$_SESSION['loggedUser'] = $loggedUser;
+			$this->loggedUser = $loggedUser;
+
+            header("Location: index");
+		}
+	}
+
+    public function logoutUser()
+    {
+        session_destroy();
+
+        header("Location: login");
+    }
+
 }

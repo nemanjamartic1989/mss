@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 require_once 'app/start.php';
 
 use Classes\Connection as Connection;
